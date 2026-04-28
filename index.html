@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Tatuador en Montevideo</title>
 </head>
 <body>
     <header>
-        <div class="logo">Nombre del Tatuador</div>
+        <div class="logo">
+            <h1>Tatoo Atelier</h1>
+        </div>
+
+        <!-- checkbox oculto -->
+         <input type="checkbox" id="menu-toggle">
+
+         <!-- Logo hamburguesa - Mennú toggle -->
+          <label for="menu-toggle" class="hamburger">
+            <span></span>     
+            <span></span>
+            <span></span>
+         </label>
+
         <nav class="menu">
             <ul>
                 <li><a href="#hero">Inicio</a></li>
@@ -19,13 +38,15 @@
             </ul>
         </nav>
     </header>
-
-    <section id="hero" class="hero">
+    <main>
+         <section id="hero" class="hero">
         <div class="hero-content">
-            <h1>Nombre del Tatuador</h1>
-            <p>10 años de experiencia creando arte en la piel en Montevideo, Uruguay.</p>
-            <p>Especializado en diseños personalizados y de alta calidad.</p>
+            <h2>Atelier Tatoo Estudio</h2>
+            <p>Más de 10 años creando tatuajes personalizados en Montevideo.</p>
+            <p>Diseño, presición y técnica en cada pieza.</p>
+            <a class="button-cta" href="#contact">Reservar turno</a>
         </div>
+
         <!-- Espacio para imagen de fondo, ocupa 100% ancho -->
     </section>
 
@@ -70,6 +91,8 @@
         <p>Ubicación: Montevideo, Uruguay</p>
     </section>
 
+    </main>
+   
     <footer>
         <p>&copy; 2023 Nombre del Tatuador. Todos los derechos reservados.</p>
         <div class="social-links">
