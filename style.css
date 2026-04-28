@@ -1,0 +1,190 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 1rem 4rem;
+    background-color: #111;
+    position: sticky;
+    width: 100%;
+   
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.menu{
+    min-width: 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff0000;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('hero-image.jpg'); /* Espacio para imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 60px; /* Ajuste por header fijo */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ff0000;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #111;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff0000;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+.about, .faq, .contact {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #000;
+}
+
+.about h2, .faq h2, .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff0000;
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.faq-item h3 {
+    color: #ff0000;
+}
+
+footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem;
+}
+
+.social-links a {
+    color: #ff0000;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+}
