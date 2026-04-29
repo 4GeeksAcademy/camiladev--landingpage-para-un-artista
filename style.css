@@ -174,12 +174,10 @@ section {
 
 @media (max-width: 768px) {
     section {
-        min-height: auto;
+        
         padding: 1.5rem 0.5rem;
     }
-    .hero{
-    min-height: 100vh;
-  }
+    
 }
 
 .hero {
