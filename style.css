@@ -5,11 +5,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-main:  #0D0D12;
+    --bg-deep: #08080A;
+    --bg-accent:  #1A0F24;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
+   
+  background:  radial-gradient(
+    circle at top,
+    var(--bg-accent),
+    var(--bg-main) 40%,
+    var(--bg-deep) 100%
+  );
+  color: var(--text-primary);
     
 }
 
@@ -19,7 +29,6 @@ header {
     align-items: center;
    
     padding: 2rem 4rem;
-    background-color: #0D0D12;
     position: sticky;
     width: 100%;
    
@@ -112,11 +121,15 @@ header {
     letter-spacing: 0.02em;
     font-weight: 500;
     text-decoration: none;
-    transition: color 0.5s;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    transition: border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu a:hover {
-    color:  rgba(128, 55, 253, 0.822);
+.menu a:hover { 
+    border: 1px solid #7B2CFF;
+    
+    
     
 }
 section {
@@ -166,18 +179,23 @@ h2 {
     font-family: "Bebas Neue", cursive;
     font-weight: 700;
     letter-spacing: 0.05em;
-    margin-bottom: 1.5rem;
+    margin: 4rem 0 2rem 0;
     color: #EDEDED;
 }
 
  p {
     font-size: 1.5rem;
     font-family: "Inter", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.03em;
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
+  
     color: #A1A1AA;
+} 
+p strong {
+    font-weight: 600;
 }
+
 .button-cta{
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -199,9 +217,9 @@ h2 {
 }
 
 .gallery {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
-    background-color: #0D0D12;
+    
 }
 
 
@@ -211,7 +229,7 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     max-width: 1200px;
-    margin: 2.5rem auto;
+    margin: 4rem auto;
 }
 
 
@@ -232,23 +250,40 @@ h2 {
 
 .about {
    position: relative;
-    background-image: url(./images/imagen-de-fondo-nosotros.png); /* Espacio para imagen de fondo */
-    background-size: cover;
-    background-position: center 20%;
+    background:
+    radial-gradient(
+      circle at top,
+      rgba(26, 15, 36, 0.7),
+      rgba(13, 13, 18, 0.85) 40%,
+      #0D0D12 100%
+    ),
+    url("./images/imagen-de-fondo-para-about.webp");
+
+    background-size: 105%;
+    background-position: calc(50% + 12px) 20%;
     background-repeat: no-repeat;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    
-    
+       
 }
+
 
 .about-content {
    position: relative;
   z-index: 1;
-  max-width: 700px;
-  padding-left: 5%;
+  max-width: 550px;
+  
+}
+
+@media (max-width: 768px) {
+    
+    .about-content {
+       max-width: 100%;
+       padding: 0.5rem;
+    }
 }
 
 
