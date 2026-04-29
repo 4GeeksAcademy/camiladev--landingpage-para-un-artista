@@ -41,7 +41,7 @@ header {
 }
 
 .logo  h1{
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: bold;
     font-family: "Bebas Neue", cursive;
     letter-spacing: 0.05em;
@@ -60,11 +60,6 @@ header {
  .nav-wrapper{
     position: relative;
 }
-/* checkbox oculto */
-#menu-toggle {
-    display: none;
-}
-
 /* icono hamburguesa - menú hamburguesa */
 .hamburger {
     display: none;
@@ -135,38 +130,53 @@ header {
         overflow-y: auto;
     }
 
-    #menu-toggle:checked ~ .menu {
-        display: block;
-    }
+    #menu:target {
+    display: block;
+  }
 
     .menu ul {
+        display: flex;
         flex-direction: column;
         gap: 0.75rem;
         padding: 1rem 2rem;
         align-items: center;
+        
     }
 
     .menu li {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        width: 100%;   
     }
 
     .menu a {
         display: inline-flex;
+        width: auto;
+        justify-content: center;
         padding: 0.75rem 1rem;
-        max-width: 280px;
+        text-align: center;
     }
+
+ .menu a:hover {
+    border-color: #7B2CFF;
+    background: rgba(123, 44, 255, 0.08);
+  }
+
 }
-
-
-
 
 section {
     width: 100%;
     min-height: 100vh;
     padding: 4rem 1rem;
     
+}
+
+@media (max-width: 768px) {
+    section {
+        min-height: auto;
+        padding: 1.5rem 0.5rem;
+    }
+    .hero{
+    min-height: 100vh;
+  }
 }
 
 .hero {
@@ -215,7 +225,7 @@ h2 {
 }
 
  p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.75rem);
     font-family: "Inter", sans-serif;
     font-weight: 400;
     letter-spacing: 0.03em;
@@ -253,7 +263,11 @@ p strong {
     
 }
 
-
+@media (max-width: 768px) {
+    .gallery {
+        padding: 2rem 1rem;
+    }
+}
 
 .grid-container {
     display: grid;
@@ -277,6 +291,19 @@ p strong {
     transform: scale(1.03);
    border-color: #7B2CFF;
     box-shadow: 0 8px 20px rgba(123,44,255,0.25);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
 }
 
 .about {
@@ -349,19 +376,24 @@ p strong {
     padding: 1rem 0.05rem;
     color: #A1A1AA;
     font-family: "Inter", sans-serif;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 .faq-item p {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 2vw, 1.25rem);
     text-align: center;
     padding: 0.5rem;
 }
  @media (max-width: 768px) {
     .faq {
         grid-template-columns: 1fr;
+        max-width: 350px;
+         margin: 2rem auto;
+        
+    }
+    
     }
 
-     }
+     
       .contact{
         display: flex;
         flex-direction: column;
@@ -388,6 +420,13 @@ p strong {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .contact{
+        max-width: 600px;
+    }
 }
 
       footer {
@@ -460,25 +499,11 @@ footer p {
   filter: drop-shadow(0 0 6px rgba(37, 211, 102, 0.25));
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .menu ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-    .hero-content h1 {
-        font-size: 1.5rem;
+    .whatsapp-link {
+        width: 50px;
+        height: 50px;
+        bottom: 40px;
+        right: 30px;
     }
 }
