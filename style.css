@@ -81,9 +81,6 @@ header {
    transition: 0.3s;
 }
 
-
-
-
 .menu ul {
     list-style: none;
     display: flex;
@@ -108,8 +105,6 @@ header {
 .menu a:hover { 
     border: 1px solid #7B2CFF; 
 }
-
-
 
 
 @media (max-width: 768px) {
