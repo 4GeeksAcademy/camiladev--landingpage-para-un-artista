@@ -363,7 +363,7 @@ p strong {
 }
 
 .faq-item {
-    padding: 1rem auto;
+    padding: 1rem;
     border: 2px solid #7B2CFF;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
