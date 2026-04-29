@@ -14,6 +14,7 @@
 body {
     
     overflow-x: hidden;
+    scroll-behavior: smooth;
 
    
   background:  radial-gradient(
@@ -41,6 +42,8 @@ header {
 }
 
 .logo  h1{
+    display: flex;
+    align-items: center;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: bold;
     font-family: "Bebas Neue", cursive;
@@ -84,7 +87,7 @@ header {
 .menu ul {
     list-style: none;
     display: flex;
-    
+    align-items: center;
     gap: 1rem;
     margin: 0;
     padding: 0;
@@ -254,7 +257,8 @@ p strong {
    color: #FF1F1F;
   border-color: #FF1F1F;
   box-shadow: 0 0 12px #FF1F1F;
-  transform: translateY(-1px);;
+  transform: translateY(-1px);
+  transition: all 0.5s ease;
 }
 
 .gallery {
@@ -291,6 +295,7 @@ p strong {
     transform: scale(1.03);
    border-color: #7B2CFF;
     box-shadow: 0 8px 20px rgba(123,44,255,0.25);
+    transition: all 0.5s ease;
 }
 
 @media (max-width: 768px) {
@@ -364,6 +369,7 @@ p strong {
 }
 .faq-item:hover {
     transform: translateY(-5px);
+    transition: all 0.5s ease;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
      background-color: rgba(255, 255, 255, 0.02);
 }
@@ -460,8 +466,8 @@ footer p {
 }
 .whatsapp-link {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 60px;
 
   width: 80px;
   height: 80px;
