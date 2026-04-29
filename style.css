@@ -19,7 +19,7 @@ header {
     align-items: center;
    
     padding: 2rem 4rem;
-    background-color: #111;
+    background-color: #0D0D12;
     position: sticky;
     width: 100%;
    
@@ -106,7 +106,7 @@ header {
 }
 
 .menu a {
-    color: #EDEDED;
+    color: #A1A1AA;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     letter-spacing: 0.02em;
@@ -116,13 +116,14 @@ header {
 }
 
 .menu a:hover {
-    color: #A855F7;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    color:  rgba(128, 55, 253, 0.822);
+    
 }
 section {
     width: 100%;
-    height: 100vh;
-    height: 100dvh;
+    min-height: 100vh;
+    padding: 4rem 1rem;
+    
 }
 
 .hero {
@@ -160,7 +161,7 @@ section {
   padding-left: 5%;
 }
 
-.hero-content h2 {
+h2 {
     font-size:  clamp(2.2rem, 5vw, 4.5rem);
     font-family: "Bebas Neue", cursive;
     font-weight: 700;
@@ -169,11 +170,12 @@ section {
     color: #EDEDED;
 }
 
-.hero-content p {
+ p {
     font-size: 1.5rem;
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    padding: 0.5rem 0;
+    letter-spacing: 0.03em;
+    padding: 0.8rem 0;
     color: #A1A1AA;
 }
 .button-cta{
@@ -199,47 +201,56 @@ section {
 .gallery {
     padding: 4rem 2rem;
     text-align: center;
-    background-color: #111;
+    background-color: #0D0D12;
 }
 
-.gallery h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #ff0000;
-}
+
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2.5rem auto;
 }
+
 
 .grid-item img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 1px solid  rgba(123,44,255,0.2);
     border-radius: 8px;
     transition: transform 0.3s;
 }
 
 .grid-item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+   border-color: #7B2CFF;
+    box-shadow: 0 8px 20px rgba(123,44,255,0.25);
 }
 
-.about, .faq, .contact {
-    padding: 4rem 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+.about {
+   position: relative;
+    background-image: url(./images/imagen-de-fondo-nosotros.png); /* Espacio para imagen de fondo */
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background-color: #000;
+    
+    
 }
 
-.about h2, .faq h2, .contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #ff0000;
+.about-content {
+   position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding-left: 5%;
 }
+
 
 .faq-item {
     margin-bottom: 2rem;
@@ -263,23 +274,7 @@ footer {
     text-decoration: none;
 }
 
-.whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: #fff;
-    padding: 1rem;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: background-color 0.3s;
-}
 
-.whatsapp-button:hover {
-    background-color: #128c7e;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
