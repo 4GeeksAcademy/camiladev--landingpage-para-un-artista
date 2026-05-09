@@ -32,7 +32,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
     padding: 2rem 4rem;
     position: sticky;
     width: 100%;
@@ -100,7 +99,7 @@ header {
     letter-spacing: 0.02em;
     font-weight: 500;
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 1rem;
     border: 1px solid transparent;
     transition: border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -175,7 +174,7 @@ section {
 @media (max-width: 768px) {
     section {
         
-        padding: 1.5rem 0.5rem;
+        padding: 0  0.5rem;
     }
     
 }
@@ -192,7 +191,7 @@ section {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    text-align: center;
+    text-align: left;
     padding-top: 6rem;
     
 }
@@ -233,7 +232,7 @@ section {
     margin-left:  clamp(3rem, 10vw, 10rem);
     position: relative;
     z-index: 1;
-    max-width: 600px;
+ 
  
 }
 
@@ -246,7 +245,7 @@ h1 {
     margin-bottom: 1rem;
     color: #EDEDED;
     text-align: left;
-    max-width: 9ch;
+    max-width: 25ch;
 }
 
 .subtitle {
@@ -269,7 +268,7 @@ h1 {
     padding: 0.5rem 0;
     text-align: left;
     color: #A1A1AA;
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
  
@@ -290,12 +289,53 @@ h1 {
     letter-spacing: 0.05em;
 }
 .button-cta:hover {
-   color: #000;
+   color: #fff;
+   font-weight: 600;
    background-color: #FF1F1F ;
   border-color: #FF1F1F;
   box-shadow: 0 8px 20px rgba(255, 31, 31, 0.25);
   transform: translateY(-2px);
   transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .hero-content {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        margin-left:  0;
+    }
+
+    h1 {
+        text-align: center; 
+    }
+    .subtitle {
+        text-align: center;
+   
+}
+
+    .description {
+         text-align: center;
+        }
+
+    .button-cta:active {
+         color: #fff;
+        font-weight: 600;
+        background-color: #FF1F1F ;
+        border-color: #FF1F1F;
+        box-shadow: 0 8px 20px rgba(255, 31, 31, 0.25);
+        transform: translateY(-2px);
+         transition: all 0.5s ease;
+}
+
 }
 
 h2 {
@@ -328,11 +368,13 @@ p strong {
     
 }
 
+
 @media (max-width: 768px) {
     .gallery {
         padding: 2rem 1rem;
     }
 }
+
 
 .grid-container {
     display: grid;
@@ -361,32 +403,21 @@ p strong {
 
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns:  repeat(2, 1fr);
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
     }
     
 }
 
 .about {
-   position: relative;
-    background:
-    radial-gradient(
-      circle at top,
-      rgba(26, 15, 36, 0.7),
-      rgba(13, 13, 18, 0.85) 40%,
-      #0D0D12 100%
-    ),
-    url("./images/imagen-de-fondo-para-about.webp");
 
-    background-size: 105%;
-    background-position: calc(50% + 12px) 20%;
-    background-repeat: no-repeat;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -398,9 +429,10 @@ p strong {
 .about-content {
    position: relative;
   z-index: 1;
-  max-width: 550px;
+  max-width: 700px;
   
 }
+
 
 @media (max-width: 768px) {
     
@@ -409,6 +441,8 @@ p strong {
        padding: 0.5rem;
     }
 }
+
+
 
 .faq{
     display: grid;
@@ -450,17 +484,28 @@ p strong {
     text-align: center;
     padding: 0.5rem;
 }
+
+
  @media (max-width: 768px) {
     .faq {
-        grid-template-columns: 1fr;
-        max-width: 350px;
-         margin: 2rem auto;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+         margin: 1rem auto;
         
     }
-    
-    }
+ }
 
-     
+@media (max-width: 480px) {
+    .faq {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+         margin: 1rem auto;
+    }
+    
+}  
+
+
+
       .contact{
         display: flex;
         flex-direction: column;
